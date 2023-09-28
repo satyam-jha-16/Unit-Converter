@@ -1,12 +1,18 @@
+const convertBtn = document.getElementById("convert-btn");
+const number = document.getElementById("input-el");
+// let num =[];
 const lengthEl = document.getElementById("length-el");
 const volumeEl = document.getElementById("volume-el");
 const massEl = document.getElementById("mass-el");
-const convertBtn = document.getElementById("convert-btn");
-let inputEl = document.getElementById("input-el").value;
-
-inputEl = Number(inputEl)
 convertBtn.addEventListener("click", function(){
-    let output1 = `${inputEl} meters = ${(inputEl*3.281).toFixed(2)} feet  |  ${inputEl} feet = ${(inputEl/3.281).toFixed(2)} meters`
-    console.log(output1)
+    // num.push(number.value)
+    lengthEl.textContent = (` ${number.value} meters = ${(number.value * 3.281).toFixed(2)} feet  |  ${number.value} feet = ${(number.value / 3.281).toFixed(2)} meters`)
+    console.log(number.value)
+
+    volumeEl.textContent = (` ${number.value} liters = ${(number.value * 0.264).toFixed(2)} gallons  |  ${number.value} gallons = ${(number.value / 0.264).toFixed(2)} liters`)
+    console.log(number.value)
+
+    massEl.textContent = (` ${number.value} kilos = ${(number.value * 2.204).toFixed(2)} pounds  |  ${number.value} pounds = ${(number.value / 2.204).toFixed(2)} kilos`)
+    console.log(number.value)
 } )
 
